@@ -126,13 +126,11 @@ body {
 }
 
 
-/* Hero Container */
 .hero-section {
     width: 100%;
     font-family: Arial, sans-serif;
 }
   
-  /* Orange Main Banner */
 .hero-content {
     background-color: #D85A30;
     color: #FFFFFF;
@@ -175,7 +173,6 @@ body {
     background-color: #332D28;
 }
   
-  /* Features Bar (Light Green) */
 .features-bar {
     background-color: rgb(234, 243, 222);
     display: flex;
@@ -193,6 +190,71 @@ body {
     text-align: center;
 }
 
+.shop-category {
+    padding: 40px 60px;
+}
+  
+.category-heading {
+    font-size: 13px;
+    font-weight: 700;
+    color: #8C877E;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+  
+.category {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+}
+  
+.category-card {
+    flex: 1; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center; 
+    background-color: #FFFFFF;
+    border: 1px solid #EAE6DF;
+    border-radius: 16px;
+    padding: 32px 16px;
+    text-decoration: none;
+    color: #1F1B18;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+  
+.category-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+  
+.category-card h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+}
+  
+.category-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+  
+.icon-peach {
+    background-color: #FAECE7;
+    color: #D85A30;
+}
+  
+.icon-mint {
+    background-color: #EEF4EA;
+    color: #2D5033;
+}
 
 
 
