@@ -129,6 +129,7 @@ body {
 .hero-section {
     width: 100%;
     font-family: Arial, sans-serif;
+    background-color: rgb(250, 248, 243);
 }
   
 .hero-content {
@@ -369,6 +370,59 @@ body {
     background-color: #33302D;
 }
 
+
+.telegram-banner {
+    margin-top: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Card Container */
+.telegram {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: #1C1A17; /* Dark charcoal background */
+    border-radius: 20px;
+    padding: 20px 24px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Icon Badge */
+.tg-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #109173; /* Emerald green */
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Text Container */
+.tg-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* Heading */
+.tg-content h4 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #F5F2EC;
+}
+
+/* Subtitle */
+.tg-content p {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 400;
+    color: #9E9A93;
+}
 
 .footer {
     background: #1F1B18;
