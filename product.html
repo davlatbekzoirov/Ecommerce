@@ -71,23 +71,23 @@
                 
                 <div class="product-rating">
                     <div class="star-rating" role="radiogroup" aria-label="Product rating">
-                      <input type="radio" id="star5" name="rating" value="5">
-                      <label for="star5" title="5 stars">★</label>
-                  
-                      <input type="radio" id="star4" name="rating" value="4">
-                      <label for="star4" title="4 stars">★</label>
-                  
-                      <input type="radio" id="star3" name="rating" value="3" checked>
-                      <label for="star3" title="3 stars">★</label>
-                  
-                      <input type="radio" id="star2" name="rating" value="2">
-                      <label for="star2" title="2 stars">★</label>
-                  
-                      <input type="radio" id="star1" name="rating" value="1">
-                      <label for="star1" title="1 star">★</label>
+                    <input type="radio" id="star5" name="rating" value="5">
+                    <label for="star5" title="5 stars">★</label>
+                
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4" title="4 stars">★</label>
+                
+                    <input type="radio" id="star3" name="rating" value="3" checked>
+                    <label for="star3" title="3 stars">★</label>
+                
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2" title="2 stars">★</label>
+                
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1" title="1 star">★</label>
                     </div>
-                  
-                    <span class="rating-text">4.3 (128 reviews)</span>
+                    
+                    <span class="rating-text"><strong id="rating-number">3.0</strong> (128 reviews)</span>
                 </div>
           
                 <div class="product-price">$49.00</div>
@@ -97,16 +97,16 @@
                 </p>
           
                 <div class="quantity-selector">
-                  <label>Quantity</label>
-                  <div class="quantity-controls">
-                    <button type="button">-</button>
-                    <span>1</span>
-                    <button type="button">+</button>
-                  </div>
+                    <label>Quantity</label>
+                    <div class="quantity-controls">
+                    <button type="button" id="btn-decrease">-</button>
+                    <span id="quantity-val">1</span>
+                    <button type="button" id="btn-increase">+</button>
+                    </div>
                 </div>
-          
-                <button type="button" class="btn-add-to-cart">
-                  Add to cart — $49.00
+                
+                <button type="button" class="btn-add-to-cart" id="add-to-cart-btn">
+                    Add to cart — $49.00
                 </button>
           
                 <div class="shipping-info">
@@ -227,10 +227,47 @@
         });
         });
 
-        document.querySelectorAll('.star-rating input[name="rating"]').forEach((star) => {
-        star.addEventListener('change', (e) => {
-            const selectedValue = e.target.value;
-            console.log(`User selected rating: ${selectedValue}`);
+        document.addEventListener('DOMContentLoaded', () => {
+        /* --------------------------------------------------
+        * 1. STAR RATING: Update rating number on click
+        * -------------------------------------------------- */
+        const ratingStars = document.querySelectorAll('.star-rating input[name="rating"]');
+        const ratingNumber = document.getElementById('rating-number');
+
+        ratingStars.forEach(star => {
+            star.addEventListener('change', (e) => {
+            const selectedRating = parseFloat(e.target.value).toFixed(1);
+            ratingNumber.textContent = selectedRating;
+            });
+        });
+
+        /* --------------------------------------------------
+        * 2. QUANTITY CONTROLLER & DYNAMIC PRICE
+        * -------------------------------------------------- */
+        const basePrice = 49.00;
+        let currentQuantity = 1;
+
+        const qtyValue = document.getElementById('quantity-val');
+        const btnDecrease = document.getElementById('btn-decrease');
+        const btnIncrease = document.getElementById('btn-increase');
+        const addToCartBtn = document.getElementById('add-to-cart-btn');
+
+        function updateCartButton() {
+            qtyValue.textContent = currentQuantity;
+            const totalPrice = (basePrice * currentQuantity).toFixed(2);
+            addToCartBtn.textContent = `Add to cart — $${totalPrice}`;
+        }
+
+        btnIncrease.addEventListener('click', () => {
+            currentQuantity++;
+            updateCartButton();
+        });
+
+        btnDecrease.addEventListener('click', () => {
+            if (currentQuantity > 1) {
+            currentQuantity--;
+            updateCartButton();
+            }
         });
         });
     </script>
