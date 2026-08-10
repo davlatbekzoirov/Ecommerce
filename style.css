@@ -656,15 +656,41 @@ body {
   .product-rating {
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 14px;
-    color: #8c8984;
+    gap: 12px;
     margin-bottom: 16px;
   }
   
-  .stars {
-    color: #d1cdcf;
-    letter-spacing: 2px;
+  /* Interactive Stars Wrapper */
+  .star-rating {
+    display: inline-flex;
+    flex-direction: row-reverse; /* Reverses order so CSS sibling selectors (~ ) work backwards */
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* Hide actual radio inputs visually */
+  .star-rating input[type="radio"] {
+    display: none;
+  }
+  
+  /* Base Star Style (Unselected) */
+  .star-rating label {
+    color: #d1cdcf; /* Unselected state */
+    padding: 0 2px;
+    cursor: pointer;
+    transition: opacity 0.15s ease, transform 0.1s ease;
+  }
+  
+  /* Selected state and hover state */
+  .star-rating label:hover,
+  .star-rating label:hover ~ label,
+  .star-rating input[type="radio"]:checked ~ label {
+    color: #1a1817; /* High-contrast active star color matching your UI */
+  }
+  
+  /* Subtle feedback effect on click/hover */
+  .star-rating label:hover {
+    transform: scale(1.15);
   }
   
   .product-price {

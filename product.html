@@ -70,8 +70,24 @@
                 <h1 class="product-title">Wireless earbuds</h1>
                 
                 <div class="product-rating">
-                  <span class="stars">★ ★ ★ ★ ☆</span>
-                  <span class="rating-text">4.3 (128 reviews)</span>
+                    <div class="star-rating" role="radiogroup" aria-label="Product rating">
+                      <input type="radio" id="star5" name="rating" value="5">
+                      <label for="star5" title="5 stars">★</label>
+                  
+                      <input type="radio" id="star4" name="rating" value="4">
+                      <label for="star4" title="4 stars">★</label>
+                  
+                      <input type="radio" id="star3" name="rating" value="3" checked>
+                      <label for="star3" title="3 stars">★</label>
+                  
+                      <input type="radio" id="star2" name="rating" value="2">
+                      <label for="star2" title="2 stars">★</label>
+                  
+                      <input type="radio" id="star1" name="rating" value="1">
+                      <label for="star1" title="1 star">★</label>
+                    </div>
+                  
+                    <span class="rating-text">4.3 (128 reviews)</span>
                 </div>
           
                 <div class="product-price">$49.00</div>
@@ -208,6 +224,13 @@
             if (imageUrl) {
             mainImage.style.backgroundImage = `url('${imageUrl}')`;
             }
+        });
+        });
+
+        document.querySelectorAll('.star-rating input[name="rating"]').forEach((star) => {
+        star.addEventListener('change', (e) => {
+            const selectedValue = e.target.value;
+            console.log(`User selected rating: ${selectedValue}`);
         });
         });
     </script>
