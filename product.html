@@ -46,6 +46,102 @@
     </nav>
 
     <main class="hero-section">
+        <section class="section-category">
+            <nav class="breadcrumbs">
+              <span>Catalog</span> / <span>Electronics</span> / <span class="active">Wireless earbuds</span>
+            </nav>
+          
+            <div class="category-product">
+              
+              <div class="product-gallery">
+                <div class="main-image-wrapper">
+                  <span class="badge-new">NEW</span>
+                  <div class="category-img"></div>
+                </div>
+          
+                <div class="thumbnails">
+                    <div class="thumb active" data-image="images/earbuds-1.jpg"></div>
+                    <div class="thumb" data-image="images/earbuds-2.jpg"></div>
+                    <div class="thumb" data-image="images/earbuds-3.jpg"></div>
+                </div>
+              </div>
+          
+              <div class="product-info">
+                <h1 class="product-title">Wireless earbuds</h1>
+                
+                <div class="product-rating">
+                  <span class="stars">★ ★ ★ ★ ☆</span>
+                  <span class="rating-text">4.3 (128 reviews)</span>
+                </div>
+          
+                <div class="product-price">$49.00</div>
+          
+                <p class="product-description">
+                  Compact true-wireless earbuds with active noise cancellation and 24-hour battery life via the case.
+                </p>
+          
+                <div class="quantity-selector">
+                  <label>Quantity</label>
+                  <div class="quantity-controls">
+                    <button type="button">-</button>
+                    <span>1</span>
+                    <button type="button">+</button>
+                  </div>
+                </div>
+          
+                <button type="button" class="btn-add-to-cart">
+                  Add to cart — $49.00
+                </button>
+          
+                <div class="shipping-info">
+                  <p class="stock-status">In stock — 34 units available</p>
+                  <p class="shipping-status">Free shipping on orders over $50</p>
+                </div>
+              </div>
+          
+            </div>
+          
+            <div class="telegram-banner">
+              Once you order, track its status anytime via Telegram — <span>/status your-order-id</span>
+            </div>
+        </section>
+        <section class="related-section">
+            <h2 class="related-title">YOU MIGHT ALSO LIKE</h2>
+          
+            <div class="related-grid">
+              <div class="related-card">
+                <div class="card-image"></div>
+                <div class="card-info">
+                  <h3 class="card-name">Bluetooth speaker</h3>
+                  <p class="card-price">$39.00</p>
+                </div>
+              </div>
+          
+              <div class="related-card">
+                <div class="card-image"></div>
+                <div class="card-info">
+                  <h3 class="card-name">USB-C charger</h3>
+                  <p class="card-price">$19.00</p>
+                </div>
+              </div>
+          
+              <div class="related-card">
+                <div class="card-image"></div>
+                <div class="card-info">
+                  <h3 class="card-name">Phone case</h3>
+                  <p class="card-price">$14.00</p>
+                </div>
+              </div>
+          
+              <div class="related-card">
+                <div class="card-image"></div>
+                <div class="card-info">
+                  <h3 class="card-name">Earbud tips (3-pack)</h3>
+                  <p class="card-price">$9.00</p>
+                </div>
+              </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
@@ -96,5 +192,24 @@
           </div>
         </div>
     </footer>
+
+    <script>
+        const thumbnails = document.querySelectorAll('.thumbnails .thumb');
+        const mainImage = document.querySelector('.category-img');
+
+        thumbnails.forEach(thumb => {
+        thumb.addEventListener('click', function() {
+            // Switch active outline
+            document.querySelector('.thumb.active')?.classList.remove('active');
+            this.classList.add('active');
+
+            // Update main image source or background
+            const imageUrl = this.getAttribute('data-image');
+            if (imageUrl) {
+            mainImage.style.backgroundImage = `url('${imageUrl}')`;
+            }
+        });
+        });
+    </script>
 </body>
 </html>
