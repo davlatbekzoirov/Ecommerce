@@ -952,27 +952,174 @@ body {
 
 /* contact_us */
 
+.contact-section {
+  background-color: #FAF8F3;
+  padding: 60px 80px;
+}
+
+.contact-heading {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.contact-subheading {
+  color: #736d65;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+/* Main Layout */
 .main-contact {
   display: flex;
-  padding: 30px 20px;
+  gap: 30px;
+  max-width: 1200px;
 }
 
+/* Form Container */
 .contact-send-message {
-  width: 1000px;
-  height: 600px;
-  background-color: white;
+  flex: 1;
+  background-color: #FFFFFF;
   border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
 }
 
-.contact-form {
-  padding: 50px 60px;
+.form-group {
+  margin-bottom: 20px;
 }
 
-#input-style {
-  margin-top: 10px;
+.form-group label {
+  display: block;
+  color: #666056;
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+/* Form Controls */
+.form-input {
   width: 100%;
-  height: 35px;
-  border-radius: 6px;
-  border-color: rgb(213, 207, 195);
-  background-color: #faf8f3;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid #E6E1D6;
+  background-color: #FAF8F3;
+  font-size: 14px;
+  color: #1a1a1a;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-input:focus {
+  border-color: #1a1a1a;
+}
+
+.message-box {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  background-color: #1A1817;
+  color: #FFFFFF;
+  border: none;
+  padding: 16px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #33302c;
+}
+
+/* Right Sidebar */
+.contacts {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Dark Contact Card */
+.contact-inner {
+  background-color: #1A1817;
+  color: #FFFFFF;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.icon-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+/* Icon Colors matching design */
+.icon-email {
+  background-color: #D3543A;
+}
+
+.icon-telegram {
+  background-color: #2D8C68;
+}
+
+.icon-phone {
+  background-color: #D3543A;
+}
+
+.info-text h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.info-text p {
+  font-size: 13px;
+  color: #A39E93;
+}
+
+/* Support Hours Card */
+.working-hours {
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.working-hours h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.working-hours p {
+  font-size: 14px;
+  color: #666056;
+  margin-bottom: 8px;
+}
+
+.working-hours p:last-child {
+  margin-bottom: 0;
 }
