@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecommerce Storefront</title>
+    <title>Ecommerce Storefront - Checkout</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -44,6 +44,124 @@
             </a>
         </div>
     </nav>
+
+    <main class="checkout-main">
+        <h1 class="checkout-title">Checkout</h1>
+
+        <div class="checkout-grid">
+            
+            <div class="checkout-card">
+                
+                <section class="checkout-section">
+                    <h3 class="section-title">Your items (3)</h3>
+                    
+                    <div class="cart-item">
+                        <div class="item-thumb"></div>
+                        <div class="item-details">
+                            <span class="item-name">Wireless earbuds</span>
+                            <span class="item-qty">Qty: 1</span>
+                        </div>
+                        <div class="item-price">$49.00</div>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="item-thumb"></div>
+                        <div class="item-details">
+                            <span class="item-name">Canvas backpack</span>
+                            <span class="item-qty">Qty: 1</span>
+                        </div>
+                        <div class="item-price">$68.00</div>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="item-thumb"></div>
+                        <div class="item-details">
+                            <span class="item-name">Ceramic mug set</span>
+                            <span class="item-qty">Qty: 2</span>
+                        </div>
+                        <div class="item-price">$48.00</div>
+                    </div>
+                </section>
+
+                <hr class="divider">
+
+                <section class="checkout-section">
+                    <h3 class="section-title">Delivery details</h3>
+                    <form id="checkout-form" class="delivery-form">
+                        <div class="form-group">
+                            <label for="fullname">Full name</label>
+                            <input type="text" id="fullname" name="fullname" placeholder="Jane Doe" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+1 555 000 0000" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" id="city" name="city" placeholder="Springfield" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Shipping address</label>
+                            <input type="text" id="address" name="address" placeholder="123 Main street, apt 4" required>
+                        </div>
+                    </form>
+                </section>
+
+                <hr class="divider">
+
+                <section class="checkout-section">
+                    <h3 class="section-title">Payment</h3>
+                    <div class="payment-options">
+                        <label class="payment-btn active">
+                            <input type="radio" name="payment" value="cod" checked>
+                            <span>Cash on delivery</span>
+                        </label>
+                        <label class="payment-btn">
+                            <input type="radio" name="payment" value="card">
+                            <span>Card online</span>
+                        </label>
+                    </div>
+                </section>
+
+            </div>
+
+            <div class="checkout-sidebar">
+                
+                <div class="summary-card">
+                    <h3 class="summary-title">Order summary</h3>
+                    
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span>$165.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span>$5.00</span>
+                    </div>
+
+                    <div class="summary-row total-row">
+                        <span>Total</span>
+                        <span class="total-price">$170.00</span>
+                    </div>
+
+                    <button type="submit" form="checkout-form" class="btn-primary">Place order</button>
+                    
+                    <p class="terms-text">By placing your order you agree to our terms.</p>
+                </div>
+
+                <div class="info-card">
+                    <h4>After you order</h4>
+                    <p>Our team gets notified instantly on Telegram, and you can track status anytime with <code>/status your-order-id</code></p>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
 
     <footer class="footer">
         <div class="footer-container">
