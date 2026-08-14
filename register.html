@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <div class="login-card">
+        
+        <div class="top-icon">
+            <i class="fa-solid fa-key"></i>
+        </div>
+
+        <div class="welcome">
+            <h2>Create your account</h2>
+            <p>Faster checkout and order tracking</p>
+        </div>
+
+        <form class="login-form" action="#" method="post">
+            <div class="form-group">
+                <label for="name">Full name</label>
+                <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" placeholder="name@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="number">Phone number</label>
+                <input type="tel" id="number" name="number" placeholder="+1 555 000 0000" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="••••••••" required>
+            </div>
+
+            <div class="forgot-pass-container" style="display: flex; align-items: center; gap: 8px; text-align: left;">
+                <input type="checkbox" id="terms" name="terms" required style="accent-color: #D3543A; cursor: pointer;">
+                <label for="terms" style="font-size: 13px; color: #666056; cursor: pointer;">
+                    I agree to the <a href="#" class="forgot-pass">terms and privacy policy</a>
+                </label>
+            </div>
+
+            <button type="submit" class="login-btn">Create account</button>
+        </form>
+
+        <div class="divider">or</div>
+
+        <a href="#" class="tg-btn">
+            <span class="tg-icon"><i class="fa-brands fa-telegram"></i></span>
+            <span>Continue with Telegram</span>
+        </a>
+    </div>
+
+    <div class="register-text">
+        <span>Already have an account?</span>
+        <a href="#">Log in</a>
+    </div>
+
+</body>
+</html>
