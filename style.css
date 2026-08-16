@@ -1175,46 +1175,98 @@ body {
 
 /* Items Section */
 .cart-item {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 20px;
-}
-
-.cart-item:last-child {
-    margin-bottom: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #EAE6DF;
 }
 
 .item-thumb {
-    width: 56px;
-    height: 56px;
-    background-color: #F0EDE6;
-    border-radius: 10px;
-    flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  background-color: #F3EFE6;
+  border-radius: 12px;
+  flex-shrink: 0;
 }
 
 .item-details {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .item-name {
-    font-size: 14px;
-    font-weight: 600;
-    color: #1A1817;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1A1817;
 }
 
-.item-qty {
-    font-size: 13px;
-    color: #8C857B;
-    margin-top: 4px;
+.item-unit-price {
+  font-size: 13px;
+  color: #8C857B;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+
+/* Quantity Selector Pill */
+.qty-picker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90px;
+  padding: 4px 10px;
+  border: 1px solid #EAE6DF;
+  border-radius: 20px;
+  background-color: #FAF8F3;
+}
+
+.qty-btn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #8C857B;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+}
+
+.qty-btn:hover {
+  color: #1A1817;
+}
+
+.qty-val {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1A1817;
+}
+
+/* Price & Remove Actions (Right Column) */
+.item-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 64px;
 }
 
 .item-price {
-    font-size: 14px;
-    font-weight: 700;
-    color: #1A1817;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1A1817;
+}
+
+.remove-btn {
+  font-size: 13px;
+  color: #E07A5F;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.remove-btn:hover {
+  opacity: 0.8;
 }
 
 /* Delivery Form Section */
