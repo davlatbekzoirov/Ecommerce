@@ -1854,3 +1854,313 @@ body {
       flex-direction: column;
   }
 }
+
+
+
+
+
+
+/* order_detail.html */
+/* Container Layout */
+.order-details-container {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Breadcrumbs & Header */
+.breadcrumb {
+  font-size: 13px;
+  color: #888888;
+  margin-bottom: 12px;
+}
+
+.breadcrumb a {
+  color: #666666;
+  text-decoration: none;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.order-title {
+  font-size: 32px;
+  font-weight: 800;
+  margin: 0 0 4px 0;
+  color: #111111;
+}
+
+.order-date {
+  font-size: 14px;
+  color: #888888;
+  margin: 0;
+}
+
+.badge-dispatched {
+  background-color: #d1f2e2;
+  color: #108e61;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+/* Grid Layout */
+.order-grid {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 20px;
+}
+
+/* Card Base */
+.card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.015);
+}
+
+.card-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: #888888;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+}
+
+/* Vertical Timeline */
+.timeline {
+  position: relative;
+  padding-left: 8px;
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 28px;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+/* Vertical connector line */
+.timeline-item:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 17px;
+  top: 36px;
+  bottom: 0;
+  width: 2px;
+  background-color: #e2dfd7;
+}
+
+.timeline-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #f4f3ef;
+  color: #a09d96;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  z-index: 1;
+}
+
+.timeline-item.completed .timeline-icon {
+  background-color: #d1f2e2;
+  color: #10b981;
+}
+
+.timeline-item.active .timeline-icon {
+  background-color: #d1f2e2;
+  color: #108e61;
+}
+
+.timeline-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-content strong {
+  font-size: 14px;
+  color: #111111;
+}
+
+.timeline-content small {
+  font-size: 12px;
+  color: #888888;
+  margin-top: 2px;
+}
+
+/* Items List */
+.items-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.item-row:first-child { padding-top: 0; }
+.item-row:last-child { border-bottom: none; padding-bottom: 0; }
+
+.item-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.item-image-placeholder {
+  width: 48px;
+  height: 48px;
+  background-color: #faf9f5;
+  border-radius: 8px;
+}
+
+.item-name {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  color: #111111;
+}
+
+.item-qty {
+  display: block;
+  font-size: 12px;
+  color: #888888;
+  margin-top: 2px;
+}
+
+.item-price {
+  font-weight: 700;
+  font-size: 14px;
+  color: #111111;
+}
+
+/* Delivery Details */
+.delivery-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.location-icon-wrapper {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #d1f2e2;
+  color: #108e61;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.delivery-address p {
+  margin: 2px 0 0 0;
+  font-size: 13px;
+  color: #888888;
+}
+
+.delivery-address strong {
+  font-size: 14px;
+  color: #111111;
+}
+
+/* Order Summary (Sidebar) */
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #666666;
+  margin-bottom: 10px;
+}
+
+.summary-divider {
+  border: none;
+  border-top: 1px solid #f4f4f4;
+  margin: 16px 0;
+}
+
+.total-row {
+  font-size: 16px;
+  color: #111111;
+  margin-bottom: 0;
+}
+
+.total-price {
+  color: #e05638;
+}
+
+/* Dark Telegram Card */
+.card-dark {
+  background-color: #1c1a17;
+  color: #ffffff;
+}
+
+.telegram-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+}
+
+.telegram-desc {
+  font-size: 12px;
+  color: #aaaaaa;
+  margin: 0 0 16px 0;
+  line-height: 1.4;
+}
+
+.btn-outline-light {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  box-sizing: border-box;
+}
+
+/* Need Help Button */
+.btn-card-action {
+  display: block;
+  width: 100%;
+  padding: 14px 16px;
+  background-color: #ffffff;
+  border-radius: 24px;
+  color: #111111;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.015);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .order-grid {
+      grid-template-columns: 1fr;
+  }
+}
