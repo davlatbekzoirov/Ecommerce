@@ -54,7 +54,137 @@
         </div>
     </nav>
 
+    <main class="order-details-container">
+        <nav class="breadcrumb">
+            <a href="/orders">Order history</a> / <span>Order #10042</span>
+        </nav>
     
+        <header class="order-header">
+            <div>
+                <h1 class="order-title">Order #10042</h1>
+                <p class="order-date">Placed Aug 15 at 10:42</p>
+            </div>
+            <span class="badge badge-dispatched">Dispatched</span>
+        </header>
+    
+        <div class="order-grid">
+            <div class="order-main">
+                <section class="card">
+                    <h2 class="card-label">STATUS</h2>
+                    <div class="timeline">
+                        <div class="timeline-item completed">
+                            <div class="timeline-icon">
+                                <i class="fa fa-check"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <strong>Order placed</strong>
+                                <small>Aug 15, 10:42</small>
+                            </div>
+                        </div>
+    
+                        <div class="timeline-item active">
+                            <div class="timeline-icon">
+                                <i class="fa fa-archive"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <strong>Dispatched</strong>
+                                <small>Aug 15, 10:47</small>
+                            </div>
+                        </div>
+    
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <i class="fa fa-truck"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <strong>Delivered</strong>
+                                <small>Expected Aug 18</small>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    
+                <section class="card">
+                    <h2 class="card-label">ITEMS (3)</h2>
+                    <ul class="items-list">
+                        <li class="item-row">
+                            <div class="item-info">
+                                <div class="item-image-placeholder"></div>
+                                <div>
+                                    <span class="item-name">Wireless earbuds</span>
+                                    <small class="item-qty">Qty: 1</small>
+                                </div>
+                            </div>
+                            <span class="item-price">$49.00</span>
+                        </li>
+                        <li class="item-row">
+                            <div class="item-info">
+                                <div class="item-image-placeholder"></div>
+                                <div>
+                                    <span class="item-name">Canvas backpack</span>
+                                    <small class="item-qty">Qty: 1</small>
+                                </div>
+                            </div>
+                            <span class="item-price">$68.00</span>
+                        </li>
+                        <li class="item-row">
+                            <div class="item-info">
+                                <div class="item-image-placeholder"></div>
+                                <div>
+                                    <span class="item-name">Ceramic mug set</span>
+                                    <small class="item-qty">Qty: 2</small>
+                                </div>
+                            </div>
+                            <span class="item-price">$48.00</span>
+                        </li>
+                    </ul>
+                </section>
+    
+                <section class="card">
+                    <h2 class="card-label">DELIVERY DETAILS</h2>
+                    <div class="delivery-row">
+                        <div class="location-icon-wrapper">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <div class="delivery-address">
+                            <strong>Jane Doe &middot; +1 555 000 0000</strong>
+                            <p>123 Main street, apt 4, Springfield</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+    
+            <aside class="order-sidebar">
+                <div class="card">
+                    <h2 class="card-label">ORDER SUMMARY</h2>
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span>$165.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span>$5.00</span>
+                    </div>
+                    <hr class="summary-divider">
+                    <div class="summary-row total-row">
+                        <strong>Total</strong>
+                        <strong class="total-price">$170.00</strong>
+                    </div>
+                </div>
+    
+                <div class="card card-dark">
+                    <h3 class="telegram-title">Prefer Telegram?</h3>
+                    <p class="telegram-desc">Send /status 10042 to our bot for live updates.</p>
+                    <a href="https://t.me/storefront_support_bot" class="btn btn-outline-light">
+                        <i class="fa fa-paper-plane-o"></i> Open Telegram bot
+                    </a>
+                </div>
+    
+                <a href="/contact" class="btn btn-card-action">Need help? Contact us</a>
+            </aside>
+        </div>
+    </main>
+
     <footer class="footer">
         <div class="footer-container">
       
